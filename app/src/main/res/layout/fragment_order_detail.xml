@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppUI.Order.OrderPickupDetail">
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="ORDER DESCRIPTION"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="Enter detailed order description"
+                                android:textColor="@color/text_color"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="392dp"
+                                app:neumorph_shapeType="pressed">
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="8dp">
+
+                                    <EditText
+                                        android:id="@+id/orderDesc_detail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="left"
+                                        android:hint="Write your order in detail with proper description.\n\nEx.\nRice - 5kg\nMixture - 0.5kg\n\nColddrinks (Sprite - 1litre bottle)\nLays - creamy onion flavour - 20rs packet - 5 pcs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                                        android:inputType="textMultiLine"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold">
+
+                                    </EditText>
+                                </ScrollView>
+                            </soup.neumorphism.NeumorphCardView>
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <TextView
+                        android:id="@+id/orderDesc_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/orderDesc_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="NEXT - CONTACT DETAILS"
+                        android:textColor="@color/background_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange"></soup.neumorphism.NeumorphButton>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/orderDesc_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="BACK - DELIVERY LOCATION DETAILS"
+                        android:textColor="@color/background_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange"></soup.neumorphism.NeumorphButton>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+</FrameLayout>

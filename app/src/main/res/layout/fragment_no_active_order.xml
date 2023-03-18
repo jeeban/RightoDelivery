@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AppUI.Dashboard.NoActiveOrder">
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_color">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="DASHBOARD"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/orange">
+
+            </TextView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/dashboard_profile"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                app:neumorph_backgroundColor="@color/background_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        app:srcCompat="@drawable/baseline_person_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_profile_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/dashboard_profile_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:gravity="top|left"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/dashboard_profile_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:gravity="top|left"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/background_color">
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:neumorph_shapeType="basin"
+                        app:neumorph_backgroundColor="@color/background_color">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/background_color">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center"
+                                    android:background="@color/background_color">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="You don't have any active order."
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="16dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold">
+                                    </TextView>
+
+                                    <soup.neumorphism.NeumorphButton
+                                        android:id="@+id/new_order_button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="64dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="24dp"
+                                        android:layout_marginTop="16dp"
+                                        android:gravity="center"
+                                        android:text="NEW ORDER"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        app:neumorph_backgroundColor="@color/orange"
+                                        app:neumorph_shapeType="flat">
+
+                                    </soup.neumorphism.NeumorphButton>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/noOrderDashboard_lastOrderDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_color">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="12dp"
+                                android:layout_marginVertical="8dp"
+                                android:gravity="center"
+                                android:text="Last Order Status"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderId"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderLine1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/noOrderDashboard_lastOrderLine3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="12dp"
+                                android:layout_marginVertical="8dp"
+                                android:gravity="center"
+                                android:text="Righto Help"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text="Orders can be placed through whatsapp and phone call. But for better experience use our app."
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text="For any kind of help, please contact - 8249337040"
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+</FrameLayout>

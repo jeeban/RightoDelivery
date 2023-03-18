@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AppUI.ProfileUpdate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="App Version Check"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/orange">
+
+        </soup.neumorphism.NeumorphTextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/appcheck_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="32dp"
+                        android:layout_marginVertical="32dp" />
+
+                    <TextView
+                        android:id="@+id/appcheck_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="Checking for Update ..."
+                        android:textColor="@color/orange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/appcheck_update_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="64dp"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center"
+                        android:text="UPDATE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange">
+                    </soup.neumorphism.NeumorphButton>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/appcheck_exit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="64dp"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center"
+                        android:text="EXIT"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange">
+
+                    </soup.neumorphism.NeumorphButton>
+
+
+
+
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

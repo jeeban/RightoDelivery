@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AppUI.TutorialLocationShareLink">
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_color">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="LOCATION SHARING LINK"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/orange">
+            </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Q. What is location sharing link ?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="It is a link containing coordinate detailsof a location. On clicking the link it will open that location directly on google map."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="\nQ. How to get the location link ?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Step1 : open google map from phone app list."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Or, Click on the button on righto app."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Step2 : Zoom the map as required and long press on the location. After long press a pin will be shown on the map at that location."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Step3 : At the bottom of the screen, swipe right and click on the SHARE button."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Step4 : Now again at the bottom of the screen, click 'copy to clipboard."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Now the location sharing link is copied. open righto app and paste the link."
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:textColor="@color/text_color">
+                        </TextView>
+
+                    </LinearLayout>
+                </soup.neumorphism.NeumorphCardView>
+            </ScrollView>
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+</FrameLayout>

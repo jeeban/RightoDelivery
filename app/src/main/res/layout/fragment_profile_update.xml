@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AppUI.ProfileUpdate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+
+        <soup.neumorphism.NeumorphTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Profile Update"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/orange">
+
+        </soup.neumorphism.NeumorphTextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:text="Enter your Name"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/orange" />
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        app:neumorph_shapeType="pressed">
+
+                        <EditText
+                            android:id="@+id/profileUpdate_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="24dp"
+                            android:gravity="center"
+                            android:hint="Name to use during delivery."
+
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                        </EditText>
+
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <TextView
+                        android:layout_height="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:text="Enter your Mobile Number"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/orange" />
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        app:neumorph_shapeType="pressed">
+
+                        <EditText
+                            android:id="@+id/profileUpdate_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="24dp"
+                            android:gravity="center"
+                            android:hint="Mobile to call during delivery."
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                        </EditText>
+
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <TextView
+                        android:layout_height="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:text="Enter your Email ID"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/orange" />
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        app:neumorph_shapeType="pressed">
+
+                        <EditText
+                            android:id="@+id/profileUpdate_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="24dp"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="Email for account related mails."
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                        </EditText>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/profileUpdate_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="UPDATE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange"
+                        app:neumorph_shapeType="flat">
+
+                    </soup.neumorphism.NeumorphButton>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/profileUpdate_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center"
+                        android:text="CANCEL"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange">
+
+                    </soup.neumorphism.NeumorphButton>
+
+
+
+
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

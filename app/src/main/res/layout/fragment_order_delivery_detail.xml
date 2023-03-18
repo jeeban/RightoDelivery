@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AppUI.Order.OrderPickupDetail">
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_color">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="DELIVERY ADDRESS"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/orange">
+            </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_color"
+                                android:gravity="center"
+                                android:text="Enter detailed delivery address.">
+
+                            </TextView>
+                            <soup.neumorphism.NeumorphCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="256dp"
+                                app:neumorph_shapeType="pressed">
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="8dp"
+                                    android:layout_gravity="center">
+
+                                    <EditText
+                                        android:id="@+id/delivery_address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="left"
+                                        android:hint="Give some details about the delivery address.\nEx.\nAny nearby landmark,\nshop name, street name, chowk name\nAny detail that will be helpful for finding delivery location.\n\nFor exact delivery address, please add a location share link of delievry location.\n\n\n\n\n\n"
+                                        android:inputType="textMultiLine"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold">
+
+                                    </EditText>
+                                </ScrollView>
+                            </soup.neumorphism.NeumorphCardView>
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:neumorph_shapeType="flat">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:text="Enter delivery location share link."
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_color"
+                                android:gravity="center">
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="64dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/delivery_mapButton"
+                                    android:layout_width="36dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    app:srcCompat="@drawable/baseline_near_me_24">
+
+                                </ImageView>
+                                <soup.neumorphism.NeumorphCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="8dp"
+                                    app:neumorph_shapeType="pressed">
+
+                                    <EditText
+                                        android:id="@+id/delivery_mapLink"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginHorizontal="8dp"
+                                        android:gravity="bottom"
+                                        android:hint=" Touch arrow button to open map."
+                                        android:inputType="text"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold">
+
+                                    </EditText>
+
+                                </soup.neumorphism.NeumorphCardView>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="How to copy location share link ?"
+                                android:textColor="@color/orange"
+                                android:layout_marginBottom="8dp"
+                                android:textStyle="bold"
+                                android:gravity="center">
+                            </TextView>
+                        </LinearLayout>
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <TextView
+                        android:id="@+id/delivery_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/delivery_nextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="NEXT - ORDER DETAILS"
+                        android:textColor="@color/background_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange"></soup.neumorphism.NeumorphButton>
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/delivery_backButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="BACK - PICKUP LOCATION DETAILS"
+                        android:textColor="@color/background_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:neumorph_backgroundColor="@color/orange"></soup.neumorphism.NeumorphButton>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+</FrameLayout>
