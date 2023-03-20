@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.R;
+import com.example.rightodelivery.R;
 
 public class TutorialLocationShareLink extends Fragment {
 

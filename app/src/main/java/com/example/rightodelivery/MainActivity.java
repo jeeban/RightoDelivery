@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.righto.AppUI.AppVersionCheck;
-import com.example.righto.AppUI.Login.LoginOptions;
+import com.example.rightodelivery.AppUI.AppVersionCheck;
+import com.example.rightodelivery.AppUI.Login.LoginOptions;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {

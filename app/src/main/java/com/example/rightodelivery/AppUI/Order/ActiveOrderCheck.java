@@ -10,10 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppModules.UserData;
-import com.example.righto.AppUI.Dashboard.ActiveOrder;
-import com.example.righto.AppUI.Dashboard.NoActiveOrder;
-import com.example.righto.R;
+import com.example.rightodelivery.AppModules.UserData;
+import com.example.rightodelivery.AppUI.Dashboard.ActiveOrder;
+import com.example.rightodelivery.AppUI.Dashboard.NoActiveOrder;
+import com.example.rightodelivery.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -38,72 +38,11 @@ public class ActiveOrderCheck extends Fragment {
     }
 
     void getActiveOrderData(){
-        if( UserData.getOrderData() == null) {
-            System.out.println(UserData.getUserData().toString()+"-------------------------------");
-            System.out.println( "Last ORder : "+UserData.getUserData("lastOrder").toString()+"-------------------------------");
-
-            String lastOrder = UserData.getUserData("lastOrder").toString();
-            if( lastOrder.equals("") ){
-                lastOrder = "x";
-            }
-            FirebaseFirestore.getInstance().collection("R_ActOrd").document( lastOrder )
-                    .get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            loading.setVisibility(View.INVISIBLE);
-                            if (task.isSuccessful()) {
-                                if( task.getResult().getData() != null) {
-                                    System.out.println("active order found. "+ task.getResult().getData() +"  "+UserData.getUserData("lastOrder").toString());
-                                    //active order available
-                                    UserData.setOrderData(task.getResult().getData());
-                                    //UserData.setTempOrderData(task.getResult().getData());
-                                    openDashboardWithActiveOrder();
-                                }
-                                else{
-                                    System.out.println("active order not found. check order history");
-                                    getLastOrderData();
-                                }
-
-                            }
-                            else{
-                                System.out.println("else part - active order not found. check order history");
-                                getLastOrderData();
-                            }
-                        }
-                    });
-        }else{
-            System.out.println("else part");
-            openDashboardWithActiveOrder();
-        }
+        getLastOrderData();
     }
 
     void getLastOrderData(){
-        if( UserData.getLastOrderData() == null) {
-
-            String lastOrder = UserData.getUserData("lastOrder").toString();
-            if( lastOrder.equals("") ){
-                lastOrder = "x";
-            }
-
-            FirebaseFirestore.getInstance().collection("R_Ord").document( lastOrder )
-                    .get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            loading.setVisibility(View.INVISIBLE);
-                            if (task.isSuccessful()) {
-                                if( task.getResult().getData() != null) {
-                                    //active order available
-                                    UserData.setLastOrderData(task.getResult().getData());
-                                }
-                                openDashboardWithNOActiveOrder();
-                            }
-                        }
-                    });
-        }else{
-            openDashboardWithNOActiveOrder();
-        }
+        openDashboardWithNOActiveOrder();
     }
 
 

@@ -1,13 +1,14 @@
 package com.example.rightodelivery.AppModules;
 
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.ListenerRegistration;
 
+import java.util.List;
 import java.util.Map;
 
 public class UserData {
+    private static List<DocumentSnapshot> orderList = null;
     private static Map<String, Object> orderData = null;
-    private static Map<String, Object> tempOrderData = null;
-    private static Map<String, Object> lastOrderData = null;
     private static Map<String, Object> userData = null;
     private static Map<String, Object> tempUserData = null;
     private static int orderViewMode = -1;
@@ -29,10 +30,6 @@ public class UserData {
     }
 
 
-
-    public static void addOrderData( String key, Object value ){
-        orderData.put( key, value);
-    }
     public static void setOrderData( Map<String, Object> data ){
         orderData = data;
     }
@@ -44,17 +41,22 @@ public class UserData {
     }
 
 
+    public static void setOrderList( List<DocumentSnapshot> list ){
+        orderList = list;
+    }
+    public static DocumentSnapshot getOrderList( String key ){
 
-    public static void setLastOrderData( Map<String, Object> data ){
-        lastOrderData = data;
+        for( DocumentSnapshot order : orderList){
+            if( order.getId().equals(key)){
+                return order;
+            }
+        }
+        return null;
+        //return orderList.get(  orderList.indexOf(key));
     }
-    public static Map<String, Object> getLastOrderData(){
-        return lastOrderData;
+    public static List<DocumentSnapshot> getOrderList(){
+        return orderList;
     }
-    public static Object getLastOrderData( String key ){
-        return lastOrderData.getOrDefault(key,"");
-    }
-
 
 
     public static void setUserData(Map<String, Object> data ){
@@ -69,29 +71,4 @@ public class UserData {
     public static void addUserData( String key, Object value ){
         userData.put( key, value);
     }
-
-
-
-
-    public static Map<String, Object> getTempOrderData(){
-        return tempOrderData;
-    }
-    public static void clearTempOrderData(){
-        tempOrderData = null;
-    }
-    public static void addTempOrderData( String key, Object value ){
-        tempOrderData.put( key, value);
-    }
-    public static Object getTempOrderData( String key ){
-        if( key.equals("phone")){
-            return tempOrderData.getOrDefault(key,UserData.getUserData("phone"));
-        }else if( key.equals("name")){
-            return tempOrderData.getOrDefault(key,UserData.getUserData("name"));
-        }
-        return tempOrderData.getOrDefault(key,"");
-    }
-    public static void setTempOrderData( Map<String, Object> data ){
-        tempOrderData = data;
-    }
-
 }

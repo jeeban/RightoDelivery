@@ -11,10 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppModules.UserData;
-import com.example.righto.AppUI.Login.LoginOptions;
-import com.example.righto.AppUI.Order.ActiveOrderCheck;
-import com.example.righto.R;
+import com.example.rightodelivery.AppModules.UserData;
+import com.example.rightodelivery.AppUI.Dashboard.NoActiveOrder;
+import com.example.rightodelivery.AppUI.Login.LoginOptions;
+import com.example.rightodelivery.AppUI.Order.ActiveOrderCheck;
+import com.example.rightodelivery.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -59,6 +60,7 @@ public class ProfileUpdate extends Fragment {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 FirebaseAuth.getInstance().getCurrentUser().delete();
                 FirebaseAuth.getInstance().signOut();
                 getParentFragmentManager().beginTransaction()
@@ -83,7 +85,7 @@ public class ProfileUpdate extends Fragment {
         UserData.addUserData("name", username);
         UserData.addUserData("phone", userphone);
 
-        FirebaseFirestore.getInstance().collection("R_Cust").document( useremail )
+        FirebaseFirestore.getInstance().collection("R_Del").document( FirebaseAuth.getInstance().getCurrentUser().getUid() )
                 .set( UserData.getUserData() )
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -91,7 +93,8 @@ public class ProfileUpdate extends Fragment {
                         if( task.isSuccessful()){
 
                             getParentFragmentManager().beginTransaction()
-                                    .replace(R.id.fragment_container, new ActiveOrderCheck())
+                                    //.replace(R.id.fragment_container, new ActiveOrderCheck())
+                                    .replace(R.id.fragment_container, new NoActiveOrder())
                                     .commit();
                         }
                         else {

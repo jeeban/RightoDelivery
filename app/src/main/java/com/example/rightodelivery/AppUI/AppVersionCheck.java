@@ -13,10 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppModules.App;
-import com.example.righto.AppModules.UserData;
-import com.example.righto.AppUI.Order.ActiveOrderCheck;
-import com.example.righto.R;
+import com.example.rightodelivery.AppModules.App;
+import com.example.rightodelivery.AppModules.UserData;
+import com.example.rightodelivery.AppUI.Order.ActiveOrderCheck;
+import com.example.rightodelivery.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -63,7 +63,7 @@ public class AppVersionCheck extends Fragment {
 
     void checkForLatestVersion(){
         if( App.getLatestVersion() == null) {
-            FirebaseFirestore.getInstance().collection("R_AppVer").document("Cus")
+            FirebaseFirestore.getInstance().collection("R_AppVer").document("Del")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
@@ -108,7 +108,8 @@ public class AppVersionCheck extends Fragment {
 
     void getProfileData() {
         if (UserData.getUserData() == null) {
-            FirebaseFirestore.getInstance().collection("R_Cust").document(FirebaseAuth.getInstance().getCurrentUser().getEmail())
+            System.out.println(FirebaseAuth.getInstance().getCurrentUser().getUid()+"++++++++++++++++++++++++++++++++");
+            FirebaseFirestore.getInstance().collection("R_Del").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override

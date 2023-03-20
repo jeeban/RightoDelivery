@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppModules.UserData;
-import com.example.righto.AppUI.Dashboard.ActiveOrder;
-import com.example.righto.R;
+import com.example.rightodelivery.AppModules.UserData;
+import com.example.rightodelivery.AppUI.Dashboard.ActiveOrder;
+import com.example.rightodelivery.AppUI.Dashboard.NoActiveOrder;
+import com.example.rightodelivery.R;
 
 import java.util.HashMap;
 
@@ -50,7 +51,7 @@ public class OrderSummary extends Fragment {
         phone = view.findViewById(R.id.orderSummar_phone);
         name = view.findViewById(R.id.orderSummar_name);
         back = view.findViewById(R.id.orderSummary_back_button);
-        modify = view.findViewById(R.id.orderSummary_change_button);
+        //modify = view.findViewById(R.id.orderSummary_change_button);
 
 
         pickAddress.setText(UserData.getOrderData("pickAddress").toString());
@@ -87,22 +88,11 @@ public class OrderSummary extends Fragment {
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new ActiveOrder())
+                        .replace(R.id.fragment_container, new NoActiveOrder())
                         .commit();
             }
         });
 
-        modify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UserData.clearTempOrderData();
-                UserData.setTempOrderData( new HashMap<>());
-                UserData.setOrderViewMode(2); // 2 = view order, no editing
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new OrderPickupDetail())
-                        .commit();
-            }
-        });
 
 
 

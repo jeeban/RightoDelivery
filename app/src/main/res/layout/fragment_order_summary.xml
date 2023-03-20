@@ -49,9 +49,51 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="Order Description"
+                                android:textColor="@color/orange"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:neumorph_shapeType="pressed">
+
+                                <TextView
+                                    android:id="@+id/orderSummar_orderDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="16dp"
+                                    android:gravity="left"
+                                    android:hint=""
+                                    android:inputType="textMultiLine"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+                            </soup.neumorphism.NeumorphCardView>
+                        </LinearLayout>
+                    </soup.neumorphism.NeumorphCardView>
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/text_color"
+                                android:textColor="@color/orange"
                                 android:gravity="center"
                                 android:text="Pickup Address">
 
@@ -66,28 +108,17 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_margin="16dp"
+                                    android:textColor="@color/text_color"
                                     android:gravity="left"
                                     android:hint=""
                                     android:inputType="textMultiLine"
-                                    android:textSize="14sp"
+                                    android:textSize="16sp"
                                     android:textStyle="bold">
 
                                 </TextView>
                             </soup.neumorphism.NeumorphCardView>
-                        </LinearLayout>
-                    </soup.neumorphism.NeumorphCardView>
 
-
-                    <soup.neumorphism.NeumorphCardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:neumorph_shapeType="flat">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-                            <TextView
+                            <!--TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="8dp"
@@ -96,7 +127,7 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color"
                                 android:gravity="center">
-                            </TextView>
+                            </TextView-->
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -126,7 +157,7 @@
                                         android:gravity="center"
                                         android:hint=""
                                         android:inputType="text"
-                                        android:textSize="14sp"
+                                        android:textSize="16sp"
                                         android:textStyle="bold">
 
                                     </TextView>
@@ -154,7 +185,7 @@
                                 android:layout_marginTop="8dp"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/text_color"
+                                android:textColor="@color/orange"
                                 android:gravity="center"
                                 android:text="Delievry Address">
 
@@ -172,25 +203,14 @@
                                     android:gravity="left"
                                     android:hint=""
                                     android:inputType="textMultiLine"
-                                    android:textSize="14sp"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="16sp"
                                     android:textStyle="bold">
 
                                 </TextView>
                             </soup.neumorphism.NeumorphCardView>
-                        </LinearLayout>
-                    </soup.neumorphism.NeumorphCardView>
 
-
-                    <soup.neumorphism.NeumorphCardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:neumorph_shapeType="flat">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-                            <TextView
+                            <!--TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="8dp"
@@ -199,7 +219,7 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color"
                                 android:gravity="center">
-                            </TextView>
+                            </TextView-->
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -229,7 +249,7 @@
                                         android:gravity="center"
                                         android:hint=""
                                         android:inputType="text"
-                                        android:textSize="14sp"
+                                        android:textSize="16sp"
                                         android:textStyle="bold">
 
                                     </TextView>
@@ -254,84 +274,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="8dp"
-                                android:gravity="center"
-                                android:text="Order Description"
-                                android:textColor="@color/text_color"
-                                android:textSize="16sp"
-                                android:textStyle="bold">
-
-                            </TextView>
-
-                            <soup.neumorphism.NeumorphCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:neumorph_shapeType="pressed">
-
-                                <TextView
-                                    android:id="@+id/orderSummar_orderDescription"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_margin="16dp"
-                                    android:gravity="left"
-                                    android:hint=""
-                                    android:inputType="textMultiLine"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold">
-
-                                </TextView>
-                            </soup.neumorphism.NeumorphCardView>
-                        </LinearLayout>
-                    </soup.neumorphism.NeumorphCardView>
-
-
-                    <soup.neumorphism.NeumorphCardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="8dp"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/text_color"
+                                android:textColor="@color/orange"
                                 android:gravity="center"
-                                android:text="Mobile number">
-
-                            </TextView>
-                            <soup.neumorphism.NeumorphCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:neumorph_shapeType="pressed">
-
-                                <TextView
-                                    android:id="@+id/orderSummar_phone"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_margin="16dp"
-                                    android:gravity="left"
-                                    android:hint=""
-                                    android:inputType="textMultiLine"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold">
-
-                                </TextView>
-                            </soup.neumorphism.NeumorphCardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="8dp"
-                                android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/text_color"
-                                android:gravity="center"
-                                android:text="Name">
+                                android:text="Customer Name">
 
                             </TextView>
                             <soup.neumorphism.NeumorphCardView
@@ -344,14 +291,65 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_margin="16dp"
-                                    android:gravity="left"
+                                    android:textColor="@color/text_color"
+                                    android:gravity="center"
                                     android:hint=""
                                     android:inputType="textMultiLine"
-                                    android:textSize="14sp"
+                                    android:textSize="16sp"
                                     android:textStyle="bold">
 
                                 </TextView>
                             </soup.neumorphism.NeumorphCardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/orange"
+                                android:gravity="center"
+                                android:text="Customer Mobile number">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="64dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/orderSummar_call"
+                                    android:layout_width="36dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    app:srcCompat="@drawable/baseline_call_24">
+
+                                </ImageView>
+                                <soup.neumorphism.NeumorphCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="8dp"
+                                    app:neumorph_shapeType="pressed">
+
+                                    <TextView
+                                        android:id="@+id/orderSummar_phone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="8dp"
+                                        android:textColor="@color/text_color"
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="text"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+
+                                </soup.neumorphism.NeumorphCardView>
+                            </LinearLayout>
+
+
                         </LinearLayout>
                     </soup.neumorphism.NeumorphCardView>
 
@@ -366,20 +364,6 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:neumorph_backgroundColor="@color/orange" />
-
-                    <soup.neumorphism.NeumorphButton
-                        android:id="@+id/orderSummary_change_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="CHANGE ORDER"
-                        android:textColor="@color/background_color"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        app:neumorph_backgroundColor="@color/orange" />
-
-
 
                 </LinearLayout>
             </ScrollView>

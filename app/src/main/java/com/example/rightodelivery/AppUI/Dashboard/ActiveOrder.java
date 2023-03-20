@@ -10,11 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppModules.UserData;
-import com.example.righto.AppUI.Order.ActiveOrderCheck;
-import com.example.righto.AppUI.Order.OrderPickupDetail;
-import com.example.righto.AppUI.Order.OrderSummary;
-import com.example.righto.R;
+import com.example.rightodelivery.AppModules.UserData;
+import com.example.rightodelivery.AppUI.Order.ActiveOrderCheck;
+import com.example.rightodelivery.AppUI.Order.OrderSummary;
+import com.example.rightodelivery.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -132,30 +131,9 @@ public class ActiveOrder extends Fragment {
             }
         });
 
-        modifyOrderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UserData.clearTempOrderData();
-                UserData.setTempOrderData( new HashMap<>());
-                UserData.setOrderViewMode(2); // 2 = view order, no editing
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new OrderPickupDetail())
-                        .commit();
-            }
-        });
 
-        cancelOrderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                if( UserData.getOrderData("status").toString().contains("Order Placed")){
-                    UserData.addOrderData("status", "Cancelled by user.");
-                    cancelOrder();
-                }else{
-                    dashboardLog.setText("Order is already accepted and delivery boy is on his way.\nPlease contact delivery boy for a cancel request.\n\nNote : Order will be cancelled only if your item is not bought yet.");
-                }
-            }
-        });
+
 
 
         return view;
@@ -171,7 +149,7 @@ public class ActiveOrder extends Fragment {
 
         FirebaseFirestore.getInstance().collection("R_ActOrd").document( UserData.getUserData("lastOrder").toString() ).delete();
         FirebaseFirestore.getInstance().collection("R_Ord").document( UserData.getUserData("lastOrder").toString() ).set( UserData.getOrderData());
-        UserData.setLastOrderData( UserData.getOrderData() );
+        //UserData.setLastOrderData( UserData.getOrderData() );
         UserData.setOrderData( null );
         getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new NoActiveOrder())

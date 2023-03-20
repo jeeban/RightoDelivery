@@ -15,8 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.righto.AppUI.AppVersionCheck;
-import com.example.righto.R;
+import com.example.rightodelivery.AppUI.AppVersionCheck;
+import com.example.rightodelivery.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -65,8 +65,10 @@ public class LoginOptions extends Fragment {
         googleLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Righto", "Google login button clicked.");
-                initGoogleLogin();
+                //Log.d("Righto", "Google login button clicked.");
+                Toast.makeText(getActivity(),"Not available. Use guest login.",Toast.LENGTH_SHORT).show();
+                //initGoogleLogin();
+
 
                 /*
                 FragmentManager fragmentManager = getChildFragmentManager();
@@ -82,7 +84,7 @@ public class LoginOptions extends Fragment {
             public void onClick(View view) {
                 //Log.d("Righto", "guest login button clicked.");
                 Toast.makeText(getActivity(),"Not available. Use google login.",Toast.LENGTH_SHORT).show();
-                //loginAsGuest();
+                loginAsGuest();
             }
         });
 
